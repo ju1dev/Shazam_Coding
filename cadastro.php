@@ -10,12 +10,20 @@ session_start();
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+	<?php
+		if (isset($_SESSION['usuario_existe'])):
+		
+		
+	?>
 	<div class="position-absolute top-50 start-50 translate-middle">
 		
 		<div class="alert alert-warning">
 			<p>Nome de usuário existente</p>
 		</div>
-		
+		<?php
+			endif;
+			unset($_SESSION['usuario_existe'])
+		?>
 
 		<h2 class="bg-primary text-light text-center">Cadastro</h2>
 		<form method="post" action="cadastrar.php">

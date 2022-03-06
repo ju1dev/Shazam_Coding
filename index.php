@@ -2,6 +2,7 @@
 <?php
 session_start();
 ?>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -14,6 +15,7 @@ session_start();
 <div class="position-absolute top-50 start-50 translate-middle">
 
 	<?php
+	//Caso o usuário insira dados inválidos a sessão é dada como não autenticada e um aviso em html aparece//
 		if (isset($_SESSION['nao_autenticado'])):
 		
 		
@@ -22,7 +24,7 @@ session_start();
 	<p>Usuário ou senha inválidos</p>
 	</div><!--Aviso de usuário ou senha inválidos-->
 	<?php
-
+	//Caso insira os dados certos a sessão é encerrada e o aviso some//
 		endif;
 		unset($_SESSION['nao_autenticado']);
 	?>
