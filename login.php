@@ -1,36 +1,62 @@
+<!DOCTYPE html>
 <?php
 session_start();
-include('conexao.php');
-
-//Caso não coloque os dados e aperte login será redirecionado para index (essa página no caso)//
-if (empty($_POST['usuario']) || empty($_POST['senha'])) {
-	header('Location: index.php');
-	exit();
-}
-
-
-$usuario = mysqli_escape_string($conexao, $_POST['usuario']);
-$senha = mysqli_escape_string($conexao, $_POST['senha']);
-
-//Prepara a query para selecionar o usuário da tabela de acordo com o username e a senha//
-$query = "select user_id, username from usuarios where username = '{$usuario}' and password = md5('{$senha}');";
-
-//executa a query no banco de dados selecionado//
-$result = mysqli_query($conexao, $query);
-
-//Verifica se existe uma linha com os dados de usuário//
-$row = mysqli_num_rows($result);
-
-//Se a linha existir: iniciar a sessão do usuário e direcionar pro painel//
-if ($row == 1) {
-	$_SESSION['usuario'] = $usuario;
-	header('Location: painel.php');
-
-}
-//Caso contrário: inicia sessão de usuário não autenticado//
- else{
-	$_SESSION['nao_autenticado'] = true;
-	header('Location: index.php');
-}
-
 ?>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Página de login</title>
+	<link rel="stylesheet" href="estilo/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+	<!--Header com navbar-->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-3" href="#">Shazam <i class="bi bi-lightning-fill"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Cursos</a>
+        <a class="nav-link active" href="login.php">Minha conta</a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+	</header>
+	<!--/Header com navbar-->
+<div class="position-absolute top-50 start-50 translate-middle">
+
+	<?php
+	//Caso o usuário insira dados inválidos a sessão é dada como não autenticada e um aviso em html aparece//
+		if (isset($_SESSION['nao_autenticado'])):
+		
+		
+	?>
+	<div class="bg-danger bg-gradient text-light">
+	<p>Usuário ou senha inválidos</p>
+	</div><!--Aviso de usuário ou senha inválidos-->
+	<?php
+	//Caso insira os dados certos a sessão é encerrada e o aviso some//
+		endif;
+		unset($_SESSION['nao_autenticado']);
+	?>
+	<h2>Login</h2>
+	<form action="login.php" method="post">
+		<input type="text" name="usuario" placeholder="nome de usuário">
+		<input type="password" name="senha" placeholder="senha">
+		<button type="submit" >Entrar</button>
+	</form>
+	<a class="text-dark" href="cadastro.php">Criar conta</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

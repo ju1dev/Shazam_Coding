@@ -31,6 +31,7 @@ session_start();
 			<input class="d-block p-2" type="text" name="usuario" placeholder="usuário" style="margin-left: 1px;">
 			<input class="d-block p-2" type="password" name="senha" placeholder="senha" style="margin-left: 1px;">
 			<button class="btn btn-primary position-absolute start-50" type="submit" style="margin-top: 2px;">Cadastrar</button>
+			<a href="index.php">Voltar</a>
 		</form>
 	</div>
 
