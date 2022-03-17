@@ -1,0 +1,27 @@
+	
+	
+html,body{
+	background-color: whitesmoke !important;
+
+
+	}
+
+#p-introducao{
+	font-size: 23px;
+}
+.p-generic{
+	font-size: 18px;
+}
+.footer{
+		height: 130px;
+		
+}
+.link{
+	color: whitesmoke;
+}
+.link:hover{
+	color:darkslategray;
+}
+.color-golden{
+	color: palegoldenrod !important;
+}
