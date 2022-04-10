@@ -1,25 +1,26 @@
-.center {
-	max-width: 1280px;
-	padding: 0 2%;
-	margin: 0 auto;
-}
-.left{
-	float: left;
-}
-.right{
-	float: right;
-}
-.w50{
-	width: 50%;
-}
-.warning{
-	background-color: red;
-	color: white;
-	text-transform: uppercase;
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+/*font-family: 'Hind Siliguri', sans-serif;*/
+/*font-family: 'Poppins', sans-serif;*/
+html, body{
+	scroll-behavior: smooth;
+	background-color: whitesmoke;
+	font-family: 'Poppins',sans-serif;
 }
 
-/*Estilização*/
-h2{
-	background-color: aquamarine;
-	text-align: center;
+
+
+.color-golden{
+	color: palegoldenrod !important;
+}
+
+#footer{
+	position: relative;
+	bottom: 0;
+}
+
+.link{
+	color: whitesmoke;
+}
+.link:hover{
+	color:darkslategray ;
 }
