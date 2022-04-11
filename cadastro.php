@@ -3,7 +3,10 @@ session_start();
 include('header.php');
 ?>
 <div class="container">
-	<div class="row justify-content-center">
+
+	<h2 class="text-center">Cadastro</h2>
+
+	<div class="row justify-content-center my-5">
 	<?php
 		if (isset($_SESSION['usuario_existe'])):
 		
@@ -19,19 +22,37 @@ include('header.php');
 			unset($_SESSION['usuario_existe'])
 		?>
 
-		
-		<form method="post" action="cadastrar.php">
-			<input class="d-block p-2" type="text" name="nome" placeholder="nome" style="margin-left: 1px;">
-			<input class="d-block p-2" type="text" name="usuario" placeholder="usuário" style="margin-left: 1px;">
-			<input class="d-block p-2" type="password" name="senha" placeholder="senha" style="margin-left: 1px;">
-			<button class="btn btn-primary position-absolute start-50" type="submit" style="margin-top: 2px;">Cadastrar</button>
-			<a href="index.php">Voltar</a>
-		</form>
+		<div class="col-lg-6">
+			<div class="card py-3 px-3">		
+			<form method="post" action="cadastrar.php">
+				<div class="form-floating my-3">
+				<input class="form-control w-50" type="text" name="nome" placeholder="nome" autocomplete="off" required style="margin-left: 1px;">
+				<label for="nome" class="form-label">Nome</label>
+				</div>
+
+				<div class="form-floating my-3">
+				<input class="form-control w-50" type="text" name="usuario" placeholder="usuário" autocomplete="off" required style="margin-left: 1px;">
+				<label for="usuario" class="form-label">Usuário</label>
+				</div>
+
+				<div class="form-floating my-3">
+				<input class="form-control w-50" type="password" name="senha" placeholder="senha" required style="margin-left: 1px;">
+				<label for="senha" class="form-label">Senha</label>
+				</div>
+
+				<button class="btn btn-dark my-3 rounded" type="submit" style="margin-top: 2px;">Cadastrar</button><br>
+				<a href="login.php">Já possuo uma conta </a>
+			</form>
+			</div>
+
+		</div>
 		</div>
 	</div>
 
 
-
+<?php
+	include('footer.php');
+?>
 
 </body>
 </html>
