@@ -18,12 +18,12 @@ $row = mysqli_fetch_assoc($result);
 //Caso exista: iniciada sessão de usuário existente//
 if($row['total'] >= 1) {
 	$_SESSION['usuario_existe'] = true;
-	echo"
+	/*echo"
 		<script> 
 			alert('Este usuario ja consta NO BANCO DE DADOS');
 			window.location.href = \"cadastro.php\";
 		</script>
-	";
+	";*/
 	exit;
 }
 

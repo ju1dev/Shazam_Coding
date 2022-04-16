@@ -1,6 +1,9 @@
 
 <?php
 session_start();
+if ( isset($_SESSION['usuario'])) {
+	header('Location:painel.php');
+}
 ?>
 
 <?php
@@ -25,10 +28,12 @@ include('header.php');
 	<div class="text-center">
 	<h2>Login</h2>
 </div>
+
 	<div class="row justify-content-center my-5">
+
 		<div class="col-lg-6 ms-5">
-<div class="card py-4 px-4">
-			<form action="login.php" method="post" style="left:90px; position: relative;">
+			<div class="card py-4 px-4">
+			<form action="logar.php" method="post" style="left:90px; position: relative;">
 							<div class="form-floating my-3">
 							<input type="text" name="usuario" placeholder="nome de usuário" class="form-control w-50">
 							<label for="usuario" class="form-label">Nome de usuário</label>
@@ -42,11 +47,11 @@ include('header.php');
 							<button type="submit" class="btn-dark my-3 rounded">Entrar</button>
 
 						</form>
-							<a class="text-dark" href="cadastro.php">Criar conta</a>
+							<a class="color-golden" href="cadastro.php" style="position: relative;left: 85px;">Criar conta</a>
 			
-		</div><!--/col-lg-6-->
+		</div><!--/card-->
+	</div><!--/col-->
 	</div><!--/row-->
-	</div><!--/card-->
 </div><!--/container-->
 
 <?php

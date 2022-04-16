@@ -10,8 +10,9 @@ html, body{
 
 
 .color-golden{
-	color: palegoldenrod !important;
+	color: goldenrod !important;
 }
+
 
 #footer{
 	position: relative;

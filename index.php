@@ -35,6 +35,7 @@ h3{
     <div class="carousel-item active">
       <img src="assets/ilustracao1.jpg" style="height:350px; width:auto" class="d-block w-100 rounded" alt="...">
       <div class="carousel-caption d-none d-md-block">
+      	<!--Implementar text shadow pra dar contraste-->
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
@@ -101,7 +102,7 @@ h3{
 
 	<div class="col-lg-3 border border-danger me-3">
 		<h5>Manel</h5>
-		<img src="assets/manel.jpg" class="rounded-circle w100" style="height:140px;width:auto;">
+		<img src="assets/manel.jpg" class="rounded-circle w100" style="height:140px; width:auto;">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -112,7 +113,7 @@ h3{
 
 	<div class="col-lg-3 border border-primary me-3">
 		<h5>Baiano</h5>
-		<img src="assets/baiano.jpg" class="rounded-circle w100" style="height:140px;width:auto;">
+		<img src="assets/baiano.jpg" class="rounded-circle w100" style="height:140px; width:auto;">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -123,7 +124,7 @@ h3{
 
 	<div class="col-lg-3 border border-info">
 		<h5>Lucas</h5>
-		<img src="assets/lucas.jpg" class="rounded-circle w100" style="height:140px;width:auto;">
+		<img src="assets/lucas.jpg" class="rounded-circle w100" style="height:140px; width:auto;">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

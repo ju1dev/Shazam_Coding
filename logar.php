@@ -24,13 +24,17 @@ $row = mysqli_num_rows($result);
 //Se a linha existir: iniciar a sessão do usuário e direcionar pro painel//
 if ($row == 1) {
 	$_SESSION['usuario'] = $usuario;
-	header('Location: painel.php');
+	echo "<script>
+			window.location.replace(\"painel.php\");
+		</script>";
 
 }
 //Caso contrário: inicia sessão de usuário não autenticado//
  else{
 	$_SESSION['nao_autenticado'] = true;
-	header('Location: index.php');
+	echo "<script>
+			window.location.replace(\"login.php\");
+		</script>";
 }
 
 ?>
