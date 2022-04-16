@@ -9,10 +9,7 @@ if ( isset($_SESSION['usuario'])) {
 <?php
 include('header.php');
 ?>
-
-<div class="container">
-	
-	<?php
+<?php
 	//Caso o usuário insira dados inválidos a sessão é dada como não autenticada e um aviso em html aparece//
 		if (isset($_SESSION['nao_autenticado'])):
 	?>
@@ -25,8 +22,12 @@ include('header.php');
 		endif;
 		unset($_SESSION['nao_autenticado']);
 	?>
+	
+<div class="container">
+
 	<div class="text-center">
 	<h2>Login</h2>
+
 </div>
 
 	<div class="row justify-content-center my-5">
@@ -34,8 +35,19 @@ include('header.php');
 		<div class="col-lg-6 ms-5">
 			<div class="card py-4 px-4">
 			<form action="logar.php" method="post" style="left:90px; position: relative;">
+
+	</div>
+	
+
+	<div class="row justify-content-center my-5">
+		<div class="col-lg-6">
+<div class="card py-4 px-4">
+	
+
+			<form id="login" action="logar.php" method="post" style="left:90px; position: relative;">
+
 							<div class="form-floating my-3">
-							<input type="text" name="usuario" placeholder="nome de usuário" class="form-control w-50">
+							<input type="text" name="usuario" placeholder="nome de usuário" class="form-control w-50" autocomplete="off">
 							<label for="usuario" class="form-label">Nome de usuário</label>
 							</div>
 							
@@ -44,10 +56,17 @@ include('header.php');
 							<input type="password" name="senha" placeholder="senha" class="form-control w-50">
 							<label for="senha" class="form-label">Senha</label>
 							</div>
+
 							<button type="submit" class="btn-dark my-3 rounded">Entrar</button>
 
 						</form>
 							<a class="color-golden" href="cadastro.php" style="position: relative;left: 85px;">Criar conta</a>
+
+							<button type="submit" class="btn btn-dark my-3 rounded">Entrar</button><br>
+							<a class="text-dark" href="cadastro.php">Criar conta</a>
+						</form>
+							
+
 			
 		</div><!--/card-->
 	</div><!--/col-->
