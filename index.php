@@ -68,11 +68,11 @@ h3{
 		<!--/Slider com imagens-->
 
 		<div class="col-lg-4 mt-4">
-			<div class="text-center">
+			<div class="">
 			<h3>Bem vindo a Shazam Coding </h3>
 			<p class="mt-4" id="p-introducao">Comece agora seu aprendizado em HTML e CSS e torne-se um desenvolvedor front-end.
 			Curso gratuito e com certificado 100% gratis !</p>
-			<button type="button" class="btn btn-dark mt-3 border border-2">Click Here</button>
+			<button type="button" class="btn btn-success mt-3 border border-2">Click Here</button>
 			</div>
 		</div>
 
@@ -85,14 +85,14 @@ h3{
 		<div class="text-center">
 			<h2>HTML <i class="bi bi-filetype-html"></i></h2>
 			<p class="p-generic">Aprenda HTML5 na prática com diversos exercícios e mais de 200 horas de conteúdo</p>
-			<button type="button" class="btn btn-success border border-2">Curso de HTML5</button>
+			<button type="button" class="btn btn-primary border border-2">Curso de HTML5</button>
 		</div>
 	</div>
 	<div class="col-lg-5 ms-5 ps-5">
 		<div class="text-center">
 			<h2>CSS <i class="bi bi-filetype-css"></i></h2>
 			<p class="p-generic">Domine o CSS e aprenda a utilizar uma de suas principais bibliotecas, o Bootstrap.</p>
-			<button type="button" class="btn btn-secondary border border-2">Curso de CSS</button>
+			<button type="button" class="btn btn-primary border border-2">Curso de CSS</button>
 		</div>
 		
 	</div>

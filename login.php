@@ -25,26 +25,17 @@ include('header.php');
 	
 <div class="container">
 
-	<div class="text-center">
-	<h2>Login</h2>
-
-</div>
-
-	<div class="row justify-content-center my-5">
-
-		<div class="col-lg-6 ms-5">
-			<div class="card py-4 px-4">
-			<form action="logar.php" method="post" style="left:90px; position: relative;">
-
-	</div>
+	
+	<h2 class="text-center">Login</h2>
 	
 
-	<div class="row justify-content-center my-5">
-		<div class="col-lg-6">
-<div class="card py-4 px-4">
 	
 
-			<form id="login" action="logar.php" method="post" style="left:90px; position: relative;">
+			
+				<div class="row justify-content-center my-5">
+				<div class="col-lg-6">
+				<div class="card py-4 px-4">
+				<form id="login" action="logar.php" method="post" style="left:90px; position: relative;">
 
 							<div class="form-floating my-3">
 							<input type="text" name="usuario" placeholder="nome de usuário" class="form-control w-50" autocomplete="off">
@@ -57,14 +48,15 @@ include('header.php');
 							<label for="senha" class="form-label">Senha</label>
 							</div>
 
-							<button type="submit" class="btn-dark my-3 rounded">Entrar</button>
+							<button type="submit" class="btn-dark my-3 rounded">Entrar</button><br>
 
-						</form>
-							<a class="color-golden" href="cadastro.php" style="position: relative;left: 85px;">Criar conta</a>
+							<a class="color-golden" href="cadastro.php">Criar conta</a>
 
-							<button type="submit" class="btn btn-dark my-3 rounded">Entrar</button><br>
-							<a class="text-dark" href="cadastro.php">Criar conta</a>
+							
+							
 						</form>
+							
+						
 							
 
 			
