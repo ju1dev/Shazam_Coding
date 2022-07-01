@@ -71,7 +71,7 @@ h3{
 			<div class="">
 			<h3>Bem vindo a Shazam Coding </h3>
 			<p class="mt-4" id="p-introducao">Comece agora seu aprendizado em HTML e CSS e torne-se um desenvolvedor front-end.
-			Curso gratuito e com certificado 100% gratis !</p>
+			Curso e certificado gratuito !</p>
 			<button type="button" class="btn btn-success mt-3 border border-2">Click Here</button>
 			</div>
 		</div>

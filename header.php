@@ -26,8 +26,17 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Cursos</a>
+        <?php
+          if (isset($_SESSION['usuario'])):
+        ?>
         <a class="nav-link active" href="login.php"><i class="bi bi-person-circle"></i></a>
-        
+        <?php
+          else:
+        ?>
+        <a class="nav-link active" href="login.php">Logar</a>
+        <?php
+        endif;
+        ?>
       </div>
     </div>
   </div>
