@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('./layouts/header.php'); ?>
 <body>
 
 
@@ -51,7 +51,7 @@
 				<h3>Bem vindo a Shazam Coding </h3>
 				<p class="mt-4" id="p-introducao">Comece agora seu aprendizado em HTML e CSS e torne-se um desenvolvedor front-end.
 				Curso gratuito e com certificado 100% gratis !</p>
-				<button type="button" class="btn btn-dark mt-3 border border-2">Click Here</button>
+				<button type="button" class="btn btn-dark mt-3 border border-2">Comece agora!</button>
 				</div>
 			</div>
 	
@@ -117,7 +117,7 @@
 	</div>
 	
 	</div>
-	<?php include('footer.php'); ?>
+	<?php include('./layouts/footer.php'); ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
